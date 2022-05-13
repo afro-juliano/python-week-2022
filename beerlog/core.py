@@ -12,16 +12,19 @@ def add_beer_to_database(
     cost: int,
 ) -> bool:
     with get_session() as session:
-        beer = Beer(**locals())
+        beer = Beer(
+            name=name,
+            style=style,
+            flavour=flavour,
+            image=image,
+            cost=cost
+        )
         session.add(beer)
         session.commit()
-
     return True
 
 
 def get_beers_from_database(style: Optional[str] = None) -> List[Beer]:
     with get_session() as session:
         sql = select(Beer)
-        if style:
-            sql = sql.where(Beer.style == style)
         return list(session.exec(sql))
