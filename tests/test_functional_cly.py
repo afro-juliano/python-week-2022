@@ -10,4 +10,4 @@ def test_add_beer():
         main, ["add", "Skol", "KornPA", "--flavour=1", "--image=1", "--cost=2"]
     )
     assert result.exit_code == 0
-    assert "Beer add" in result.stdout
+    assert "Beer added" in result.stdout
