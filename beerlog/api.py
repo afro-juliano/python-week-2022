@@ -7,7 +7,7 @@ from beerlog.database import get_session
 from beerlog.models import Beer
 from beerlog.serializers import BeerIn, BeerOut
 
-api = FastAPI(titile="Beerlog")
+api = FastAPI(title="Beerlog")
 
 
 @api.get("/beers/", response_model=List[BeerOut])
