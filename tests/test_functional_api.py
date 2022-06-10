@@ -1,4 +1,4 @@
-from fastapi.testClient import TestClient
+from fastapi.testclient import TestClient
 
 from beerlog.api import api
 
