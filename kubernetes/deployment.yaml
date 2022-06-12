@@ -16,7 +16,7 @@ spec:
         app: beerlog
     spec:
       containers:
-      - image: afroroot/beerlog:1.0
+      - image: afroroot/beerlog:2.0
         name: beerlog
         ports:
         - containerPort: 8000
