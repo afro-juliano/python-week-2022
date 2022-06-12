@@ -81,7 +81,7 @@ jobs:
       - name: Deploy do service da APP
         uses: kodermax/kubectl-aws-eks@master
         env: 
-          RELEASE_IMAGE: linuxtips/beerlog:2.0
+          RELEASE_IMAGE: afroroot/beerlog:2.0
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
           args: apply -f kubernetes/service.yaml --record
